@@ -1,3 +1,7 @@
 import { camelCase } from 'lodash'
+import B from './b'
 
-console.log(camelCase('hello world'))
+let b = new B
+
+console.log(camelCase(b.y))
+
