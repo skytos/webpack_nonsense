@@ -1,7 +1,6 @@
-import { camelCase } from 'lodash'
 import B from './b'
 
 let b = new B
 
-console.log(camelCase(b.y))
-
+const main = document.getElementById('main')
+main.innerHTML = b.y
