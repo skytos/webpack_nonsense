@@ -10,23 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/a.js":
-/*!******************!*\
-  !*** ./src/a.js ***!
-  \******************/
+/***/ "./src/foo.js":
+/*!********************!*\
+  !*** ./src/foo.js ***!
+  \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ A)\n/* harmony export */ });\nclass A {\n    constructor() {\n        this.x = 'hello sky'\n    }\n}\n\n\n//# sourceURL=webpack://webpack/./src/a.js?");
-
-/***/ }),
-
-/***/ "./src/b.js":
-/*!******************!*\
-  !*** ./src/b.js ***!
-  \******************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ B)\n/* harmony export */ });\n/* harmony import */ var _a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./a */ \"./src/a.js\");\n\n\nclass B extends _a__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\n    constructor() {\n        super()\n        this.y = this.x.substring(3)\n    }\n}\n\n\n//# sourceURL=webpack://webpack/./src/b.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Foo)\n/* harmony export */ });\nclass Foo extends HTMLElement {\n    constructor() {\n        super()\n    }\n    connectedCallback() {\n        this.innerHTML = `foo: ${this.innerHTML}`\n    }\n}\n\n\n//# sourceURL=webpack://webpack/./src/foo.js?");
 
 /***/ }),
 
@@ -36,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _b__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./b */ \"./src/b.js\");\n\n\nlet b = new _b__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n\nconst main = document.getElementById('main')\nmain.innerHTML = b.y\n\n//# sourceURL=webpack://webpack/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _foo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./foo */ \"./src/foo.js\");\n\n\ncustomElements.define('x-foo', _foo__WEBPACK_IMPORTED_MODULE_0__[\"default\"])\n\n\n//# sourceURL=webpack://webpack/./src/index.js?");
 
 /***/ })
 

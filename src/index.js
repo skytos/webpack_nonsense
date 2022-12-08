@@ -1,6 +1,3 @@
-import B from './b'
+import Foo from './foo'
 
-let b = new B
-
-const main = document.getElementById('main')
-main.innerHTML = b.y
+customElements.define('x-foo', Foo)
